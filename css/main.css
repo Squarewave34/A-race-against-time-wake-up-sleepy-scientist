@@ -1,0 +1,127 @@
+body{
+  background: url(../assets/testBG.jpg);
+  margin: 0;
+  box-sizing: border-box;
+  background-size: cover;
+  background-repeat: none;
+}
+
+#container{
+  height: 100vh;
+  position: relative;
+  background-color: aquamarine;
+}
+
+/* header */
+#header{
+  display: flex;
+  justify-content: end;
+}
+
+#timeTracker{
+  height: 115px;
+  width: 115px;
+
+  margin: 15px;
+  background-color: blueviolet;
+}
+
+/* dialogue */
+/* .dialogue{
+  display: none;
+} */
+
+#spriteLeft{
+  height: 600px;
+  width: 300px;
+  margin-right: 40px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
+
+  background-color: rgb(94, 182, 84);
+}
+
+#spriteRight{
+  height: 600px;
+  width: 300px;
+  margin-left: 40px;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+
+  background-color: rgb(142, 69, 132);
+}
+
+#dialogueBox{
+  height: 150px;
+  margin: 15px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  /* https://css-tricks.com/almanac/properties/p/position/ for reference */
+
+  background-color: rgb(55, 54, 54);
+}
+
+/* items */
+.item{
+  display: none;
+}
+
+#library{
+  height: 450px;
+  width: 300px;
+
+  position: absolute;
+  bottom: 100px;
+  right: 25%;
+  z-index: 8;
+
+  background-color: rgb(121, 89, 47);
+}
+
+#wardrobe{
+  height: 450px;
+  width: 300px;
+
+  position: absolute;
+  bottom: 100px;
+  right: 47%;
+  z-index: 8;
+
+  background-color: rgb(192, 156, 147);
+}
+
+#closet{
+  height: 300px;
+  width: 100px;
+
+  position: absolute;
+  bottom: 400px;
+  left: 50px;
+  z-index: 8;
+
+  background-color: rgb(217, 88, 71);
+}
+
+#shoe{
+  height: 100px;
+  width: 100px;
+
+  position: absolute;
+  bottom: 100px;
+  left: 100px;
+  z-index: 8;
+
+  color: white;
+  background-color: rgb(33, 34, 36);
+}

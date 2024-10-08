@@ -97,3 +97,5 @@
 - If I'm done and have enough time, I want to create a constant that has a number that can be compared to the current time to determine when is the player running late. It will be attached to a part of the time tracker function so when the player gets to this number, a small scene will display to tell the player they're running late, and I can add to the timer function the ability to change a shape or color when the time is running out
 
 - I can then add new HTML elements, a skip button in the dialogue box, a pause button and a button to change the room. for the skip button, I can create a function that sets the dialogue location variable to the end of the scene to skip the scene. for the pause button, there could be pause function that stops the timer,would also likely display a specific screen. The changing room button  will take the user to a new room (maybe in a new HTML?)
+
+[gameplay plan](https://app.milanote.com/1SXQNl14vulZ3U/game-plan)

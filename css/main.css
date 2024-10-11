@@ -1,3 +1,4 @@
+/* general */
 body{
   background: url(../assets/testBG.jpg);
   margin: 0;
@@ -6,31 +7,36 @@ body{
   background-repeat: none;
 }
 
-#container{
-  height: 100vh;
-  position: relative;
-  background-color: aquamarine;
-}
-
 /* header */
 #header{
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
 }
 
 #timeTracker{
   height: 115px;
   width: 115px;
 
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+
+  margin: 15px;
+  background-color: blueviolet;
+}
+
+#backButton{
+  height: 75px;
+  width: 75px;
+
+  z-index: 10;
+
   margin: 15px;
   background-color: blueviolet;
 }
 
 /* dialogue */
-/* .dialogue{
-  display: none;
-} */
-
 #spriteLeft{
   height: 600px;
   width: 300px;
@@ -41,7 +47,7 @@ body{
   right: 0;
   z-index: 9;
 
-  background-color: rgb(94, 182, 84);
+  background-size: cover;
 }
 
 #spriteRight{
@@ -54,11 +60,11 @@ body{
   left: 0;
   z-index: 9;
 
-  background-color: rgb(142, 69, 132);
+  background-size: cover;
 }
 
-#dialogueBox{
-  height: 150px;
+#dialogueBoxContainer{
+  height: 180px;
   margin: 15px;
 
   position: absolute;
@@ -72,11 +78,33 @@ body{
   background-color: rgb(55, 54, 54);
 }
 
-/* items */
-.item{
-  display: none;
+#dialogueBox{
+  height: 70%;
+  background-color: rgb(95, 178, 113);
+  display: flex;
+  justify-content: center;
+  font-size: larger;
 }
 
+#nextButtonContainer{
+  height: 30%;
+  background-color: rgb(44, 15, 124);
+  display: flex;
+  justify-content: end;
+}
+
+#nextButton{
+  height: 100%;
+  width: 50px;
+  margin: 0 15px;
+  z-index: 11;
+
+  align-self: flex-end;
+
+  background-color: rgb(188, 25, 25);
+}
+
+/* items */
 #library{
   height: 450px;
   width: 300px;
@@ -113,15 +141,84 @@ body{
   background-color: rgb(217, 88, 71);
 }
 
-#shoe{
+#shoes{
   height: 100px;
   width: 100px;
 
   position: absolute;
-  bottom: 100px;
+  top: 100px;
   left: 100px;
   z-index: 8;
 
   color: white;
   background-color: rgb(33, 34, 36);
+}
+
+#paperHalf_1{
+  height: 30px;
+  width: 100px;
+
+  position: absolute;
+  bottom: 70px;
+  left: 80px;
+  z-index: 8;
+
+  background-color: rgb(153, 159, 170);
+}
+
+/* puzzles */
+
+/* inventory */
+#inventoryBox{
+  height: 80px;
+  width: 70%;
+  margin: 15px auto;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 6;
+
+  display: flex;
+
+  background-color: white;
+  border: 1px solid black;
+}
+
+#inventoryItem{
+  height: 100%;
+  width: 12.5%;
+
+  border: 1px solid black;
+}
+
+/* scenes */
+/* library */
+#libraryBigPicture{
+  height: 100vh;
+  margin: 0 15px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background-color: brown;
+}
+
+#briefCase{
+  height: 100px;
+  width: 550px;
+
+  position: absolute;
+  bottom: 150px;
+  left: 160px;
+
+  background-color: rgb(73, 9, 9);
+}
+
+/* hide */
+.hide{
+  display: none;
 }

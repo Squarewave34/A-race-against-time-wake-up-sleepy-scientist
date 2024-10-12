@@ -61,11 +61,6 @@ const puzzleElement = document.querySelectorAll(".puzzle")
 const inventoryElement = document.querySelectorAll(".inventory")
 const SceneElements = document.querySelectorAll(".scenes")
 
-const librarySceneElement = document.querySelectorAll(".libraryScene")
-const closetSceneElement = document.querySelectorAll(".closetScene")
-const shoesSceneElement = document.querySelectorAll(".shoesScene")
-const wardrobeSceneElement = document.querySelectorAll(".wardrobeScene")
-
 
 
 // UI/UX
@@ -77,10 +72,10 @@ const leftSpriteElement = document.querySelector("#spriteLeft")
 const rightSpriteElement = document.querySelector("#spriteRight")
 
 // scenes
-// library
-const briefCaseElement = document.querySelector("#libraryBriefCase")
-
-
+const librarySceneElement = document.querySelectorAll(".libraryScene")
+const closetSceneElement = document.querySelectorAll(".closetScene")
+const shoesSceneElement = document.querySelectorAll(".shoesScene")
+const wardrobeSceneElement = document.querySelectorAll(".wardrobeScene")
 /*-------------------------------- script --------------------------------*/
 const script= [
   [
@@ -179,42 +174,58 @@ const show = (itemToShow) =>{
 
 // game initialization
 const init = () =>{
+  // current scene is 0
   currentScene = 0
+  // inventory is empty
   inventory = []
+  // no dialogue
   hide(dialogueConstructionElement)
+  // no inventory element
   hide(inventoryElement)
+  // no scenes
   hide(SceneElements)
-
+  // no back button
   backButtonElement.classList.add("hide")
 }
 
 init()
 
-// Adds to inventory
-const addToInventory = () =>{
-  console.log("addToInventory works");
+// Adds to inventory, it will take the name of the item
+const addToInventory = (item) =>{
+  // it will push it into the inventory 
+  inventory.push(item)
+  // It will find it's index
+  let inventoryId = inventory.findIndex((invItem)=>{
+    return invItem===item
+  })
+  // and then it will display it into the inventory block with the same index
+  inventoryElement[inventoryId+1].textContent=item
+  itemElement.forEach(element => {
+    if(element.id===item){
+      element.remove()
+    }
+  });
 }
 
-// shows sprites
-const showSprites = (left, right) =>{
-    leftSpriteElement.style.backgroundImage=left
-    rightSpriteElement.style.backgroundImage=right
-}
-
-let test = 0
 // displays the dialogue
 const displayDialogue = (scenes, idx) =>{
+  // it will take the scene and the current line index, if we're not yet at the end of the scene, show the line
+  // and sprites
   if(idx!=script[scenes].length){
     dialogueElement.textContent=script[scenes][idx].line
-    showSprites(script[scenes][idx].spriteLeft, script[scenes][idx].spriteRight)
+    leftSpriteElement.style.backgroundImage=script[scenes][idx].spriteLeft
+    rightSpriteElement.style.backgroundImage=script[scenes][idx].spriteRight
   }
 
+  // if we're at the end of the scene, hide the dialogue elements and show the inventory, this is the part that
+  // ends recursion 
   if(idx===script[scenes].length){
     hide(dialogueConstructionElement)
     show(inventoryElement)
   }
 
   // goes to the next line recursively
+  // when the next button is clicked, it will increase the line index and call this function again
   nextButtonElement.addEventListener("click", ()=>{
     if(idx<script[scenes].length){
       idx++
@@ -225,39 +236,54 @@ const displayDialogue = (scenes, idx) =>{
 
 // directs displayItems' functions
 const directDisplayItem = (clickedItem) =>{
+  // it will find the specific item that was clicked by comparing the item name in the items array with the id
+  // of the clicked element
   let itemScene = clickableItems.find((item)=>{
     return item.item===clickedItem.target.id
   })
 
+  // if this item has inventoryItem= true, it is not a scene element, don't continue and go to inventory with the
+  // name of the item
+  if(itemScene.inventoryItem){
+    addToInventory(itemScene.item)
+    return
+  }
+
+  // if that wasn't the case, itemSceneID will save the id of the scene this item triggers
   itemSceneID=itemScene.scene
+  // it will also save the background of the scene
   itemSceneBackground=script[itemSceneID][0].background
 
+  // it will hide the inventory and items
   hide(inventoryElement)
   hide(itemElement)
 
+  // and show the dialogue and background of this scene and the backButton
   show(dialogueConstructionElement)
   show(itemSceneBackground)
   backButtonElement.classList.remove("hide")
 
+  // finally, it will activate the function that will progress the scene
   displayDialogue(itemSceneID, 0)
-
-  if(itemScene.inventoryItem){
-    addToInventory()
-  }
 }
 
 // directs puzzles' functions
 const startPuzzleFunction = (clickedPuzzle) => {
+  // it will find the specific puzzle that was clicked by comparing the item name in the puzzles array with the id
+  // of the clicked element
   let puzzleId = puzzles.find((puzzle)=>{
     return puzzle.item===clickedPuzzle.target.id
   })
 
+  // it will then save the function from the puzzles array and send it to the function mapPuzzles
   puzzleId = puzzleId.function
   mapPuzzles(puzzleId)
 }
 
 /*----------------------------- Event Listeners -----------------------------*/
 // handles items clicks
+// When any item is clicked, this will automatically activate, at any time and during any scene
+// for each element, it will send it to the item function
 itemElement.forEach((item)=>{
   item.addEventListener('click',(event)=>{
     directDisplayItem(event)
@@ -265,6 +291,8 @@ itemElement.forEach((item)=>{
 })
 
 // handles puzzles clicks
+// When any puzzle is clicked, this will automatically activate, at any time and during any scene
+// for each puzzle, it will send it to the puzzle function
 puzzleElement.forEach((puzzle)=>{
   puzzle.addEventListener('click',(event)=>{
     startPuzzleFunction(event)
@@ -272,7 +300,9 @@ puzzleElement.forEach((puzzle)=>{
 })
 
 // handles backButtons
+// When the back button is clicked, this will automatically activate, at any time and during any scene
 backButtonElement.addEventListener("click", ()=>{
+  // it will hide dialogue, scenes and itself, and show elements and the inventory. 
   hide(dialogueConstructionElement)
   hide(SceneElements)
   show(itemElement)

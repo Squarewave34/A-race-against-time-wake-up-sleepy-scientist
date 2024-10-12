@@ -1,5 +1,5 @@
 /*-------------------------------- variables --------------------------------*/
-let currentScene, inventory
+let currentScene, inventory, firstClickedItem, secondClickedItem
 
 /*-------------------------------- Constants --------------------------------*/
 const clickableItems = [
@@ -32,12 +32,12 @@ const clickableItems = [
 
 const puzzles = [
   // MVP
-  {item: "briefCase", function: "briefCaseFunction"},
-  {item: "fingerPrintReader", function: "fingerPrintReaderFunction"},
-  {item: "laptop", function: "laptopFunction"},
+  {item: "briefCase", function: "briefCaseFunction", clickable: true},
+  {item: "fingerPrintReader", function: "fingerPrintReaderFunction", clickable: true},
+  {item: "laptop", function: "laptopFunction", clickable: true},
+  {item: "numberPad", function: "numberPadFunction", clickable: true},
 
   // level up
-  {item: "numberPad", function: "numberPadFunction"},
   {item: "phone", function: "phoneFunction"},
 ]
 
@@ -51,6 +51,7 @@ const mergeableItems = [
   // level up
   ["fingerprintsKit", "coffee"],
   ["fingerprintsKit", "xenoPhone"],
+  ["fingerprintsKit", "briefCase"],
 ]
 
 /*------------------------ Cached Element References ------------------------*/
@@ -178,6 +179,10 @@ const init = () =>{
   currentScene = 0
   // inventory is empty
   inventory = []
+  // clicked item 1
+  firstClickedItem = ""
+  // clicked item 2
+  secondClickedItem = ""
   // no dialogue
   hide(dialogueConstructionElement)
   // no inventory element
@@ -190,6 +195,9 @@ const init = () =>{
 
 init()
 
+// time
+
+
 // Adds to inventory, it will take the name of the item
 const addToInventory = (item) =>{
   // it will push it into the inventory 
@@ -200,11 +208,29 @@ const addToInventory = (item) =>{
   })
   // and then it will display it into the inventory block with the same index
   inventoryElement[inventoryId+1].textContent=item
+  inventoryElement[inventoryId+1].style.backgroundImage="url('../assets/Senku_test.png')"
   itemElement.forEach(element => {
     if(element.id===item){
       element.remove()
     }
   });
+}
+
+// checks if two items can be merged
+const mergeItems = (firstItem, secondItem) =>{
+  for(i=0; i<mergeableItems.length; i++){
+    if(mergeableItems[i][0]===firstItem && mergeableItems[i][1]=== secondItem || 
+      mergeableItems[i][1]===firstItem && mergeableItems[i][0]=== secondItem){
+      // here i will need to code each result independently i think
+      console.log("right");
+      firstClickedItem = ""
+      secondClickedItem = ""
+      return
+    }
+  }
+  console.log("wrong");
+  firstClickedItem = ""
+  secondClickedItem = ""
 }
 
 // displays the dialogue
@@ -232,6 +258,16 @@ const displayDialogue = (scenes, idx) =>{
       displayDialogue(scenes, idx)
     }
   })
+}
+
+const itemsWereClicked = (itemToSave) =>{
+  if(firstClickedItem===""){
+    firstClickedItem=itemToSave
+  }
+  else if(firstClickedItem!=""){
+    secondClickedItem=itemToSave
+    mergeItems(firstClickedItem, secondClickedItem)
+  }
 }
 
 // directs displayItems' functions
@@ -275,6 +311,11 @@ const startPuzzleFunction = (clickedPuzzle) => {
     return puzzle.item===clickedPuzzle.target.id
   })
 
+  if(puzzleId.clickable){
+    itemsWereClicked(puzzleId.item)
+    return
+  }
+
   // it will then save the function from the puzzles array and send it to the function mapPuzzles
   puzzleId = puzzleId.function
   mapPuzzles(puzzleId)
@@ -309,3 +350,12 @@ backButtonElement.addEventListener("click", ()=>{
   show(inventoryElement)
   backButtonElement.classList.add("hide")
 })
+
+inventoryElement.forEach((invBlock, idx) => {
+  if(invBlock.id==="inventoryBox"){}
+  else{
+    invBlock.addEventListener("click", ()=>{
+      itemsWereClicked(inventory[idx-1])
+    })
+  }
+});

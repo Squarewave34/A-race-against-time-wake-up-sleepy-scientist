@@ -1,39 +1,3 @@
-/*-------------------------------- script --------------------------------*/
-const script= [
-  [
-    {line: "this is a test line", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
-    {line: "this line makes sure i can keep on moving with script", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
-    {line: "and this is my last test for scene 0", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
-  ],
-
-  [
-    {line: "guess what? scene 2 starts here", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "You are far too nice, but it has a price", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "you reveal your name?", spriteLeft:"", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "and you let him live.", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "ruthlessness is mercy upon ourselves", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "we took no pleasure in his pain", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "the line between naivety and hopefulness is almost invisible", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:""},
-  ],
-
-  [
-    {line: "when does a ripple become a tidal wave", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "when does a man become a monster", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "I am your darkest moment", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "All i gotta do is open this bag", spriteLeft:"", spriteRight: ""},
-  ],
-
-  [
-    {line: "captain. I have something that I must confess", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: ""},
-    {line: "something that I must get off my chest", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "go make sure this island is secure",spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "where's the rest of your crew?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
-    {line: "we came across a palace, inside we heard a voice", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
-    {line: "what did this palace hide?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
-    {line: "but this was a hell of a twist, cause we are weak to a power like this", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-  ]
-]
-
 /*-------------------------------- variables --------------------------------*/
 let currentScene, inventory
 
@@ -44,6 +8,7 @@ const clickableItems = [
   
   {item: "closet", inventoryItem: false, scene: "1"},
   {item: "paperHalf_1", inventoryItem: true, scene: "2"},
+
   {item: "shoes", inventoryItem: false, scene: "3"},
   {item: "paperHalf_2", inventoryItem: true, scene: "4"},
 
@@ -94,7 +59,14 @@ const itemElement = document.querySelectorAll(".item")
 const dialogueConstructionElement = document.querySelectorAll(".dialogue")
 const puzzleElement = document.querySelectorAll(".puzzle")
 const inventoryElement = document.querySelectorAll(".inventory")
+const SceneElements = document.querySelectorAll(".scenes")
+
 const librarySceneElement = document.querySelectorAll(".libraryScene")
+const closetSceneElement = document.querySelectorAll(".closetScene")
+const shoesSceneElement = document.querySelectorAll(".shoesScene")
+const wardrobeSceneElement = document.querySelectorAll(".wardrobeScene")
+
+
 
 // UI/UX
 const dialogueElement = document.querySelector("#dialogueBox")
@@ -108,6 +80,42 @@ const rightSpriteElement = document.querySelector("#spriteRight")
 // library
 const briefCaseElement = document.querySelector("#libraryBriefCase")
 
+
+/*-------------------------------- script --------------------------------*/
+const script= [
+  [
+    {line: "this is a test line", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')", background:librarySceneElement},
+    {line: "this line makes sure i can keep on moving with script", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
+    {line: "and this is my last test for scene 0", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
+  ],
+
+  [
+    {line: "guess what? scene 2 starts here", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')", background:closetSceneElement},
+    {line: "You are far too nice, but it has a price", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    {line: "you reveal your name?", spriteLeft:"", spriteRight:"url('../assets/Senku_test.png')"},
+    {line: "and you let him live.", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    {line: "ruthlessness is mercy upon ourselves", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    {line: "we took no pleasure in his pain", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    {line: "the line between naivety and hopefulness is almost invisible", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:""},
+  ],
+
+  [
+    {line: "when does a ripple become a tidal wave", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')", background:wardrobeSceneElement},
+    {line: "when does a man become a monster", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    {line: "I am your darkest moment", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    {line: "All i gotta do is open this bag", spriteLeft:"", spriteRight: ""},
+  ],
+
+  [
+    {line: "captain. I have something that I must confess", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "", background:shoesSceneElement},
+    {line: "something that I must get off my chest", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    {line: "go make sure this island is secure",spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    {line: "where's the rest of your crew?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
+    {line: "we came across a palace, inside we heard a voice", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
+    {line: "what did this palace hide?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
+    {line: "but this was a hell of a twist, cause we are weak to a power like this", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+  ]
+]
 
 /*----------------------------- puzzle functions -----------------------------*/
 // Calls each puzzle's function
@@ -155,28 +163,17 @@ const phoneFunction = () => {
 }
 
 /*-------------------------------- Functions --------------------------------*/
-// test
-// itemElement.forEach(item => {
-//   item.classList.add("hide")
-// });
-
-// puzzleElement.forEach(item => {
-//   item.classList.add("hide")
-// });
-
-// dialogueConstructionElement.forEach(item => {
-//   item.classList.add("hide")
-// });
-
-// inventoryElement.forEach(item => {
-//   item.classList.add("hide")
-// });
-
 // removes scenes
-
 const hide = (itemToHide) =>{
   itemToHide.forEach(item => {
     item.classList.add("hide")
+  });
+}
+
+// shows scenes
+const show = (itemToShow) =>{
+  itemToShow.forEach(item => {
+    item.classList.remove("hide")
   });
 }
 
@@ -186,7 +183,9 @@ const init = () =>{
   inventory = []
   hide(dialogueConstructionElement)
   hide(inventoryElement)
-  hide(librarySceneElement)
+  hide(SceneElements)
+
+  backButtonElement.classList.add("hide")
 }
 
 init()
@@ -194,17 +193,6 @@ init()
 // Adds to inventory
 const addToInventory = () =>{
   console.log("addToInventory works");
-}
-
-// hides a scene and shows another
-const changeDisplay = (hide, show)=>{
-  hide.forEach(item => {
-    item.classList.add("hide")
-  });
-
-  show.forEach(item => {
-    item.classList.remove("hide")
-  });
 }
 
 // shows sprites
@@ -216,14 +204,14 @@ const showSprites = (left, right) =>{
 let test = 0
 // displays the dialogue
 const displayDialogue = (scenes, idx) =>{
-  console.log(idx);
   if(idx!=script[scenes].length){
     dialogueElement.textContent=script[scenes][idx].line
     showSprites(script[scenes][idx].spriteLeft, script[scenes][idx].spriteRight)
   }
 
   if(idx===script[scenes].length){
-    changeDisplay(dialogueConstructionElement, inventoryElement)
+    hide(dialogueConstructionElement)
+    show(inventoryElement)
   }
 
   // goes to the next line recursively
@@ -242,9 +230,15 @@ const directDisplayItem = (clickedItem) =>{
   })
 
   itemSceneID=itemScene.scene
+  itemSceneBackground=script[itemSceneID][0].background
 
-  changeDisplay(inventoryElement, dialogueConstructionElement)
-  changeDisplay(itemElement, librarySceneElement)
+  hide(inventoryElement)
+  hide(itemElement)
+
+  show(dialogueConstructionElement)
+  show(itemSceneBackground)
+  backButtonElement.classList.remove("hide")
+
   displayDialogue(itemSceneID, 0)
 
   if(itemScene.inventoryItem){
@@ -280,6 +274,8 @@ puzzleElement.forEach((puzzle)=>{
 // handles backButtons
 backButtonElement.addEventListener("click", ()=>{
   hide(dialogueConstructionElement)
-  // Go make a class and a query all for all scenes and we can hide any scene by this command
-  // hide(scenes)
+  hide(SceneElements)
+  show(itemElement)
+  show(inventoryElement)
+  backButtonElement.classList.add("hide")
 })

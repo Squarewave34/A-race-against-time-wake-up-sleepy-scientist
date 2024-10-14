@@ -1,6 +1,6 @@
 /* general */
 body{
-  background: url(../assets/testBG.jpg);
+  background: url(../assets/main/bg.png);
   margin: 0;
   box-sizing: border-box;
   background-size: cover;
@@ -106,52 +106,71 @@ body{
 
 /* items */
 #library{
-  height: 450px;
-  width: 300px;
+  width: 545px;
+  height: 454px;
+
+  background: url(../assets/main/library.png);
+  background-size: cover;
 
   position: absolute;
-  bottom: 100px;
-  right: 25%;
+  top: 62px;
+  left: 462px;
   z-index: 8;
-
-  background-color: rgb(121, 89, 47);
 }
 
 #wardrobe{
-  height: 450px;
-  width: 300px;
+  width: 74px;;
+  height: 500px;
+
+  background: url(../assets/main/wardrobe.png);
+  background-size: cover;
 
   position: absolute;
   bottom: 100px;
-  right: 47%;
+  right: 0;
   z-index: 8;
-
-  background-color: rgb(192, 156, 147);
 }
 
+
 #closet{
-  height: 300px;
-  width: 100px;
+  width: 147px;
+  height: 510px;
+
+  background: url(../assets/main/closet.png);
+  background-size: cover;
 
   position: absolute;
-  bottom: 400px;
-  left: 50px;
+  top: 110px;
+  left: 10px;
   z-index: 8;
-
-  background-color: rgb(217, 88, 71);
 }
 
 #shoes{
-  height: 100px;
-  width: 100px;
+  width: 715px;
+  height: 333px;
+
+  background: url(../assets/main/couch.png);
+  background-size: cover;
 
   position: absolute;
-  top: 100px;
-  left: 100px;
+  bottom: 0px;
+  left: 375px;
   z-index: 8;
+}
 
-  color: white;
-  background-color: rgb(33, 34, 36);
+#numberPad{
+  width: 296px;
+  height: 375px;
+
+  background-color: bisque;
+
+  background: url(../assets/main/numberpad.png);
+  background-size: cover;
+
+  position: absolute;
+  top: 70px;
+  left: 120px;
+  z-index: 8;
 }
 
 /* puzzles */

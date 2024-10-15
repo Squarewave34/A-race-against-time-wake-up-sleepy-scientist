@@ -15,23 +15,22 @@
           back
         </div>
         <div id="timeTracker">
-          time
         </div>
       </div>
 
-      <div class="item room1" id="library">
+      <div class="room1" id="library">
       </div>
 
-      <div class="item room1" id="wardrobe">
+      <div class="room1" id="wardrobe">
       </div>
 
-      <div class="item room1" id="closet">
+      <div class="room1" id="closet">
       </div>
 
-      <div class="item room1" id="shoes">
+      <div class="room1" id="shoes">
       </div>
 
-      <div class="item room1" id="numberPad">
+      <div class="room1" id="numberPad">
       </div>
 
       <div class="dialogue" id="spriteLeft">
@@ -60,21 +59,66 @@
       </div>
 
       <div class="libraryScene scenes" id="libraryBigPicture">
-        <div class="puzzle libraryScene scenes" id="briefCase"></div>
+        <div class="libraryScene scenes showsANewScene" id="briefCase"></div>
+      </div>
+
+      <div class="briefCaseScene scenes" id="briefCaseBigPicture">
+        <div class="briefCaseScene scenes" id="briefCaseDisplayNumberLeft"></div>
+        <div class="briefCaseScene scenes" id="briefCaseDisplayNumberRight"></div>
+        <div class="briefCaseScene scenes center number" id="briefCaseClickNumberOne"></div>
+        <div class="briefCaseScene scenes center number" id="briefCaseClickNumberTwo"></div>
+        <div class="briefCaseScene scenes center number" id="briefCaseClickNumberThree"></div>
+        <div class="briefCaseScene scenes center number" id="briefCaseClickNumberFour"></div>
+        <div class="briefCaseScene scenes center number" id="briefCaseClickNumberFive"></div>
+        <div class="briefCaseScene scenes center number" id="briefCaseClickNumberSix"></div>
+      </div>
+
+      <div class="briefCaseOpenScene scenes" id="briefCaseOpenBigPicture">
+        <div class="briefCaseOpenScene scenes showsANewScene" id="laptop"></div>
+      </div>
+
+      <div class="briefCaseOpenLaptopOpenScene scenes" id="LaptopOpenBigPicture">
+        <div class="briefCaseOpenLaptopOpenScene scenes item" id="keyboard"></div>
       </div>
 
       <div class="closetScene scenes" id="closetBigPicture">
         <div class="closetScene scenes item" id="paperHalf_1"></div>
       </div>
 
+      <div class="paperHalf_1Scene scenes" id="paperHalf_1Full">
+      </div>
+
       <div class="shoesScene scenes" id="shoesBigPicture">
-        <div class="shoesScene scenes item" id="paperHalf_2"></div>
+        <div class="shoesScene scenes showsANewScene" id="shoesCloseUp"></div>
+      </div>
+
+      <div class="shoesCloserScene scenes" id="shoesBiggestPicture">
+        <div class="shoesCloserScene scenes item" id="paperHalf_2"></div>
+      </div>
+
+      <div class="paperHalf_2Scene scenes" id="paperHalf_2Full">
       </div>
 
       <div class="wardrobeScene scenes" id="wardrobeBigPicture">
-        <div class="wardrobeScene scenes item" id="fingerprintsKit"></div>
+        <div class="wardrobeScene scenes showsANewScene" id="wardrobeDoor"></div>
       </div>
 
+      <div class="wardrobeOpenDoorScene scenes" id="wardrobeDoorOpen">
+        <div class="wardrobeOpenDoorScene scenes showsANewScene" id="box"></div>
+      </div>
+
+      <div class="boxScene scenes" id="boxBigPicture">
+        <div class="boxScene scenes item" id="fingerprintsKit"></div>
+      </div>
+
+      <div class="numberPadScene scenes" id="numberPadBigPicture">
+        <div class="numberPadScene scenes item" id="numberPadCloseUp"></div>
+        <div class="numberPadScene scenes item" id="fingerprintReader"></div>
+      </div>
+
+      <div id="losingScreen">
+        Sorry you lost
+      </div>
 
   </body>
 

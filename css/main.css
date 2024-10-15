@@ -7,6 +7,12 @@ body{
   background-repeat: none;
 }
 
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* header */
 #header{
   display: flex;
@@ -23,7 +29,8 @@ body{
   z-index: 10;
 
   margin: 15px;
-  background-color: blueviolet;
+  color: black;
+  font-size: x-large;
 }
 
 #backButton{
@@ -207,79 +214,364 @@ body{
 /* library */
 #libraryBigPicture{
   height: 100vh;
-  margin: 0 15px;
 
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 
-  background-color: brown;
+  background: url(../assets/library/bg.png);
+  background-size: cover;
 }
 
 #briefCase{
-  height: 100px;
-  width: 550px;
+  height: 43px;
+  width: 200px;
 
   position: absolute;
-  bottom: 150px;
-  left: 160px;
+  bottom: 110px;
+  left: 500px;
 
-  background-color: rgb(73, 9, 9);
+  background:url(../assets/library/briefcase.png);
+  background-size: cover;
+}
+
+#briefCaseBigPicture{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background: url(../assets/briefcase_closeUp/bg.png);
+  background-size: cover;
+}
+
+#briefCaseDisplayNumberLeft{
+  width: 173px;
+  height: 48px;
+
+  position: absolute;
+  top: 300px;
+  left: 340px;
+
+  background: url(../assets/briefcase_closeUp/showNumberLeft.png);
+  background-size: cover;
+}
+
+#briefCaseDisplayNumberRight{
+  width: 163px;
+  height: 41px;
+
+  position: absolute;
+  top: 290px;
+  right: 280px;
+
+  background: url(../assets/briefcase_closeUp/showNumberRight.png);
+  background-size: cover;
+}
+
+#briefCaseClickNumberOne{
+  width: 60px;
+  height: 51px;
+
+  position: absolute;
+  top: 340px;
+  left: 360px;
+
+  background: url(../assets/briefcase_closeUp/squareOneLeft.png);
+  background-size: cover;
+}
+
+#briefCaseClickNumberTwo{
+  width: 60px;
+  height: 50px;
+
+  position: absolute;
+  top: 338px;
+  left: 409px;
+
+  background: url(../assets/briefcase_closeUp/squareTwoLeft.png);
+  background-size: cover;
+}
+
+#briefCaseClickNumberThree{
+  width: 60px;
+  height: 53px;
+
+  position: absolute;
+  top: 333px;
+  left: 456px;
+
+  background: url(../assets/briefcase_closeUp/squareThreeLeft.png);
+  background-size: cover;
+}
+
+#briefCaseClickNumberFour{
+  width: 60px;
+  height: 64px;
+
+  position: absolute;
+  top: 325px;
+  right: 370px;
+
+  background: url(../assets/briefcase_closeUp/squareOneRight.png);
+  background-size: cover;
+}
+
+#briefCaseClickNumberFive{
+  width: 66px;
+  height: 60px;
+
+  position: absolute;
+  top: 325px;
+  right: 320px;
+
+  background: url(../assets/briefcase_closeUp/squareTwoRight.png);
+  background-size: cover;
+}
+
+#briefCaseClickNumberSix{
+  width: 66px;
+  height: 61px;
+
+  position: absolute;
+  top: 325px;
+  right: 270px;
+
+  background: url(../assets/briefcase_closeUp/squareThreeRight.png);
+  background-size: cover;
+}
+
+#briefCaseOpenBigPicture{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/briefcase_closeUp/bg_open.png);
+  background-size:contain;
+}
+
+#laptop{
+  width: 710px;
+  height: 251px;
+
+  position: absolute;
+  top: 470px;
+  left: 360px;
+
+  background:url(../assets/briefcase_closeUp/laptop.png);
+  background-size:contain;
+}
+
+#LaptopOpenBigPicture{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/briefcase_closeUp/laptop_open.png);
+  background-size:contain;
+}
+
+#keyboard{
+  width: 725px;
+  height: 257px;
+
+  position: absolute;
+  top: 465px;
+  left: 355px;
+
+  background:url(../assets/briefcase_closeUp/keyboard.png);
+  background-size:contain;
 }
 
 /*  closet */
 #closetBigPicture{
   height: 100vh;
-  margin: 0 15px;
 
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 
-  background-color: rgb(23, 37, 184);
+  background:url(../assets/closet/bg.png);
+  background-size:contain;
 }
 
 #paperHalf_1{
-  height: 30px;
-  width: 100px;
+  width: 60px;
+  height: 26px;
 
   position: absolute;
-  top: 550px;
-  left: 300px;
+  bottom: 90px;
+  right: 600px;
   z-index: 8;
 
-  background-color: rgb(153, 159, 170);
+  background: url(../assets/closet/paperHalf.png);
+  background-size: cover;
+}
+
+#paperHalf_1Full{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/inventory/paperHalf_1.png);
+  background-size:contain;
+}
+
+#paperHalf_2Full{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/inventory/paperHalf_2.png);
+  background-size:contain;
 }
 
 /* shoes */
 #shoesBigPicture{
   height: 100vh;
-  margin: 0 15px;
 
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
 
-  background-color: rgb(237, 36, 147);
+  background:url(../assets/couch/bg.png);
+  background-size:cover;
+}
+
+#shoesCloseUp{
+  height: 127px;
+  width: 175px;
+
+  position: absolute;
+  top: 520px;
+  left: 300px;
+  z-index: 8;
+
+  background:url(../assets/couch/shoes.png);
+  background-size:cover;
+}
+
+#shoesBiggestPicture{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/shoes_closeUp/bg.png);
+  background-size:cover;
 }
 
 #paperHalf_2{
-  height: 30px;
-  width: 100px;
+  height: 87px;
+  width: 118px;
 
   position: absolute;
   top: 550px;
   left: 300px;
   z-index: 8;
 
-  background-color: rgb(162, 132, 132);
+  background:url(../assets/shoes_closeUp/paperHalf.png);
+  background-size:cover;
 }
 
 /* wardrobe */
 #wardrobeBigPicture{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/wardrobe/bg.png);
+  background-size:cover;
+}
+
+#box{
+  height: 76px;
+  width: 151px;
+
+  position: absolute;
+  top: 442px;
+  left: 398px;
+  z-index: 8;
+
+  background:url(../assets/wardrobe/box.png);
+  background-size:cover;
+}
+
+#boxBigPicture{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/box_closeUp/bg.png);
+  background-size:cover;
+}
+
+#wardrobeDoor{
+  height: 455px;
+  width: 190px;
+
+  position: absolute;
+  top: 71px;
+  left: 337px;
+
+
+  background:url(../assets/wardrobe/door.png);
+  background-size:cover;
+}
+
+#wardrobeDoorOpen{
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  background:url(../assets/wardrobe/bg_open.png);
+  background-size:cover;
+}
+
+#fingerprintsKit{
+  height: 400px;
+  width: 344px;
+
+  position: absolute;
+  top: 260px;
+  left: 350px;
+
+
+  background:url(../assets/box_closeUp/tools.png);
+  background-size:cover;
+}
+
+
+/* numberPad */
+#numberPadBigPicture{
   height: 100vh;
   margin: 0 15px;
 
@@ -288,22 +580,43 @@ body{
   left: 0;
   right: 0;
 
-  background-color: rgb(230, 106, 28);
+  background:url(../assets/numberpad/bg.png);
+  background-size:cover;
 }
 
-#fingerprintsKit{
-  height: 100px;
-  width: 100px;
+#numberPadCloseUp{
+  height: 67px;
+  width: 150px;
 
   position: absolute;
-  top: 550px;
-  left: 500px;
+  top: 415px;
+  right: 400px;
   z-index: 8;
 
-  background-color: rgb(37, 18, 76);
+  background:url(../assets/numberpad/display.png);
+  background-size:cover;
+}
+
+#fingerprintReader{
+  height: 120px;
+  width: 106px;
+
+  position: absolute;
+  top: 490px;
+  right: 470px;
+  z-index: 8;
+
+  background:url(../assets/numberpad/fingerprintReader.png);
+  background-size:cover;
+}
+
+#losingScreen{
+  height: 100vh;
+  background-color: rgb(95, 33, 33);
+  color: white;
 }
 
 /* hide */
 .hide{
-  display: none;
+  display: none !important;
 }

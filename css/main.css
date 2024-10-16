@@ -181,34 +181,6 @@ body{
 }
 
 /* puzzles */
-
-/* inventory */
-#inventoryBox{
-  height: 80px;
-  width: 70%;
-  margin: 15px auto;
-
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  z-index: 6;
-
-  display: flex;
-
-  background-color: white;
-  border: 1px solid black;
-}
-
-#inventoryItem{
-  height: 100%;
-  width: 12.5%;
-
-  border: 1px solid black;
-
-  background-position: center;
-  background-size: cover;
-}
 /* scenes */
 
 /* library */
@@ -614,6 +586,34 @@ body{
   height: 100vh;
   background-color: rgb(95, 33, 33);
   color: white;
+}
+
+/* inventory */
+#inventoryBox{
+  height: 80px;
+  width: 70%;
+  margin: 15px auto;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+
+  display: flex;
+
+  background-color: white;
+  border: 1px solid black;
+}
+
+#inventoryItem{
+  height: 100%;
+  width: 12.5%;
+
+  border: 1px solid black;
+
+  background-position: center;
+  background-size: cover;
 }
 
 /* hide */

@@ -235,7 +235,8 @@ const winningScreen = (()=>{
   hide(mainRoomElement)
   hide(showBiggerBackgroundElement)
   backButtonElement.classList.add("hide")
-  timeTrackerElement.classList.add("hide")})
+  timeTrackerElement.classList.add("hide")
+})
 
 // reference: https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,")%3B%20%7D%20%7D%2C%201000)%3B
 const timer = (()=>{
@@ -323,45 +324,6 @@ const addToInventory = (item) =>{
 
   showInventory()
 }
-
-// const mergeItems = (firstItem, secondItem) =>{
-//   if(firstItem==="paperHalf_1" && secondItem==="paperHalf_2" || secondItem==="paperHalf_1" && firstItem==="paperHalf_2"){
-//     console.log("it's a full paper!!");
-
-//     let item1 = inventory.findIndex((item)=>{
-//       return item===firstItem
-//     })
-  
-//     let item2 = inventory.findIndex((item)=>{
-//       return item===secondItem
-//     })
-  
-//     inventory[item1]="fullPaper"
-//     inventory.splice(item2, 1)
-//     inventoryElement[item1+1].style.backgroundImage=""
-//     inventoryElement[item2+1].style.backgroundImage="url('../assets/Gen_test.png')"
-//     console.log(inventoryElement[item1+1], inventoryElement[item2+1]);
-//   }
-
-//   else if(firstItem==="fingerprintsKit" && secondItem==="keyboard"){
-//     inventory.push(key.item)
-
-//     let inventoryId = inventory.findIndex((object)=>{
-//       return object===key.item
-//     })
-
-//     console.log(inventoryId);
-
-//     inventoryElement[inventoryId+1].style.backgroundImage=key.img
-//   }
-//   else if(firstItem==="fingerprint" && secondItem==="fingerprintReader"){
-//     winningScreen()
-//   }
-//   firstClickedItem = ""
-//   secondClickedItem = ""
-
-//   console.log(inventory);
-// }
 
 const mergeItems = (firstItem, secondItem)=>{
   console.log("you're in");

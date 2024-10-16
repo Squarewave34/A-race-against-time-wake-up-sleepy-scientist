@@ -2,11 +2,11 @@
 
 ## 1. MVP
 **All items required**
-- [] Use the DOM
-- [] There needs to be a "win or loss" mechanic
+- [x] Use the DOM
+- [x] There needs to be a "win or loss" mechanic
 > timer, one hour in game until loss, probably like 10 to 15 minutes irl 
 - [x] there needs to be organized HTML, CSS, JavaScript, and JavaScript data files
-- [] add all required features
+- [x] add all required features
 > my required features are an extra plan for each option
 - [] game works online
 
@@ -15,12 +15,12 @@
 - [] no errors
 - [] code as taught
 - [] no clgs
-- [] no prompt() or alert()
-- [] proper indentation
+- [x] no prompt() or alert()
+- [x] proper indentation
 
 ## 3. UI/UX
 **3 items required**
-- [] use flexbox or grid somewhere
+- [x] use flexbox or grid somewhere
 - [] add instructions
 - [] use proper colors
 > check with the [**color code thingy**](https://webaim.org/resources/contrastchecker/)
@@ -29,22 +29,22 @@
 
 ## 4. Git and GitHub
 **All items required**
-- [] no other person is in my repository
+- [x] no other person is in my repository
 - [] give it a proper name...
-- [] commit messages are present and date back to today with proper descriptions
+- [x] commit messages are present and date back to today with proper descriptions
 
 ## 5. README Requirements
 **3 items are required**
-- [] screenshot or logo of the game
+- [X] screenshot or logo of the game
 - [] info
-  - [] name
-  - [] description
+  - [X] name
+  - [X] description
   - [] background info
-  - [] why you chose it
+  - [X] why you chose it
 - [] link to working game
-- [] references
-- [] technology used
-- [] future enhancement
+- [X] references
+- [X] technology used
+- [X] future enhancement
 
 ## 6. Presentation
 **All items are required**

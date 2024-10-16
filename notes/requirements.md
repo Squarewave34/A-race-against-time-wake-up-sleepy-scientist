@@ -13,8 +13,8 @@
 ## 2. Code convention
 **3 items required**
 - [] no errors
-- [] code as taught
-- [] no clgs
+- [X] code as taught
+- [X] no clgs
 - [x] no prompt() or alert()
 - [x] proper indentation
 
@@ -25,12 +25,12 @@
 - [] use proper colors
 > check with the [**color code thingy**](https://webaim.org/resources/contrastchecker/)
 - [] all imgs have alts
-- [] no text is inaccessible
+- [X] no text is inaccessible
 
 ## 4. Git and GitHub
 **All items required**
 - [x] no other person is in my repository
-- [] give it a proper name...
+- [X] give it a proper name...
 - [x] commit messages are present and date back to today with proper descriptions
 
 ## 5. README Requirements

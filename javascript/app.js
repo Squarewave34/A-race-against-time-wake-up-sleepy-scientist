@@ -108,11 +108,11 @@ const clickableItems = [
 ]
 
 const inventoryItems = [
-  {item:"paperHalf_1", img:"url('../assets/Senku_test.png')", background: paperHalf_1Element},
-  {item:"paperHalf_2", img:"url('../assets/Senku_test.png')", background: paperHalf_2Element},
-  {item:"fullPaper", img:"url('../assets/Gen_test.png')", background: "url('../assets/Gen_test.png')"},
-  {item:"fingerprintsKit", img:"url('../assets/Senku_test.png')"},
-  {item:"fingerprint", img:"url('../assets/Gen_test.png')", background: "url('../assets/Senku_test.png')"}
+  {item:"paperHalf_1", img:"url('../assets/Senku_test.png')", backgroundIsElement: true, background: paperHalf_1Element},
+  {item:"paperHalf_2", img:"url('../assets/Senku_test.png')", backgroundIsElement: true, background: paperHalf_2Element},
+  {item:"fullPaper", img:"url('../assets/Gen_test.png')", backgroundIsElement: false, background: "url('../assets/Gen_test.png')"},
+  {item:"fingerprintsKit", img:"url('../assets/Senku_test.png')",backgroundIsElement: false},
+  {item:"fingerprint", img:"url('../assets/Gen_test.png')", backgroundIsElement: false, background: "url('../assets/Senku_test.png')"}
 ]
 
 const briefCaseNumbers = [0, 0, 0, 0, 0, 0]
@@ -273,39 +273,40 @@ const displayDialogue = (scenes, idx) =>{
   })
 }
 
+const assignClickedItem = (clickedItem, idxNeeded, idx) =>{
+  if(firstClickedItem.name===""){
+    firstClickedItem.name=clickedItem
+  }
+  
+  else if(firstClickedItem.name!=""){
+    secondClickedItem.name=clickedItem
+    mergeItems(firstClickedItem, secondClickedItem)
+  }
+  
+  if(idxNeeded){
+    firstClickedItem.idx=idx
+  }
+}
+
 const itemsWereClicked = (itemToSave, idx) =>{
   if(itemToSave.item==="fingerprintsKit"){
-    if(firstClickedItem.name===""){
-      firstClickedItem.name=itemToSave.item
-      console.log("first");
-      return
-    }
-  }
-
-  if(itemToSave==="keyboard"){
-    if(firstClickedItem.name!=""){
-      console.log("second");
-      secondClickedItem.name="keyboard"
-    }
-    mergeItems(firstClickedItem, secondClickedItem)
+    assignClickedItem(itemToSave.item, false)
     return
   }
-
-  if(itemToSave==="fingerprintReader"){
-    if(firstClickedItem.name!=""){
-      console.log("second");
-      secondClickedItem.name="fingerprintReader"
-    }
-    mergeItems(firstClickedItem, secondClickedItem)
-    return
-  }
-
+  
   if(itemToSave.item==="fingerprint"){
-    if(firstClickedItem.name===""){
-      firstClickedItem.name=itemToSave.item
-      console.log("first");
-      return
-    }
+    assignClickedItem(itemToSave.item, false)
+    return
+  }
+  
+  if(itemToSave==="keyboard"){
+    assignClickedItem("keyboard", false)
+    return
+  }
+  
+  if(itemToSave==="fingerprintReader"){
+    assignClickedItem("fingerprintReader", false)
+    return
   }
   
   let searchItem = itemToSave.item
@@ -313,25 +314,15 @@ const itemsWereClicked = (itemToSave, idx) =>{
   let itemToShow = inventoryItems.findIndex((invElem)=>{
     return invElem.item === searchItem
   })
-
-    background = inventoryItems[itemToShow].background
+  
+  background = inventoryItems[itemToShow].background
+  if(inventoryItems[itemToShow].backgroundIsElement){
     background.classList.remove("hide")
-    hide(mainRoomElement)
-    backButtonElement.classList.remove("hide")
-
-  if(firstClickedItem.name===""){
-    firstClickedItem.name=itemToSave.item
-    firstClickedItem.idx=idx
-    console.log("first");
-    return
   }
-
-  if(firstClickedItem.name!=""){
-    secondClickedItem.name=itemToSave.item
-    secondClickedItem.idx=idx
-    console.log("sec");
-    mergeItems(firstClickedItem, secondClickedItem)
-  }
+  hide(mainRoomElement)
+  backButtonElement.classList.remove("hide")
+  
+  assignClickedItem(itemToSave.item, true, idx)
 }
 
 const directDisplayRoom = (clickedItem) =>{

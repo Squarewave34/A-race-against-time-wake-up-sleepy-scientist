@@ -588,6 +588,12 @@ body{
   color: white;
 }
 
+#winningScreen{
+  height: 100vh;
+  background-color: rgb(39, 115, 208);
+  color: black;
+}
+
 /* inventory */
 #inventoryBox{
   height: 80px;

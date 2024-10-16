@@ -2,41 +2,41 @@
 const script= [
   [
     {line: "this is a test line", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
-    {line: "this line makes sure i can keep on moving with script", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
-    {line: "and this is my last test for scene 0", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
+    // {line: "this line makes sure i can keep on moving with script", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
+    // {line: "and this is my last test for scene 0", spriteLeft:"url('../assets/Senku_test.png')", spriteRight:"url('../assets/Gen_test.png')"},
   ],
 
   [
     {line: "guess what? scene 2 starts here", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "You are far too nice, but it has a price", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "you reveal your name?", spriteLeft:"", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "and you let him live.", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "ruthlessness is mercy upon ourselves", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "we took no pleasure in his pain", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
-    {line: "the line between naivety and hopefulness is almost invisible", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:""},
+    // {line: "You are far too nice, but it has a price", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    // {line: "you reveal your name?", spriteLeft:"", spriteRight:"url('../assets/Senku_test.png')"},
+    // {line: "and you let him live.", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    // {line: "ruthlessness is mercy upon ourselves", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    // {line: "we took no pleasure in his pain", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:"url('../assets/Senku_test.png')"},
+    // {line: "the line between naivety and hopefulness is almost invisible", spriteLeft:"url('../assets/Gen_test.png')", spriteRight:""},
   ],
 
   [
     {line: "when does a ripple become a tidal wave", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "when does a man become a monster", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "I am your darkest moment", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "All i gotta do is open this bag", spriteLeft:"", spriteRight: ""},
+    // {line: "when does a man become a monster", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    // {line: "I am your darkest moment", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    // {line: "All i gotta do is open this bag", spriteLeft:"", spriteRight: ""},
   ],
 
   [
     {line: "captain. I have something that I must confess", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: ""},
-    {line: "something that I must get off my chest", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "go make sure this island is secure",spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "where's the rest of your crew?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
-    {line: "we came across a palace, inside we heard a voice", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
-    {line: "what did this palace hide?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
-    {line: "but this was a hell of a twist, cause we are weak to a power like this", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    // {line: "something that I must get off my chest", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    // {line: "go make sure this island is secure",spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    // {line: "where's the rest of your crew?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
+    // {line: "we came across a palace, inside we heard a voice", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
+    // {line: "what did this palace hide?", spriteLeft:"url('../assets/Gen_test.png')", spriteRight: "url('../assets/Senku_test.png')"},
+    // {line: "but this was a hell of a twist, cause we are weak to a power like this", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
   ],
 
   [
     {line: "I see a song of past romance", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "I see the sacrifice of man", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
-    {line: "I see portrayals of betrayal and a brother's final stand", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    // {line: "I see the sacrifice of man", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
+    // {line: "I see portrayals of betrayal and a brother's final stand", spriteLeft:"url('../assets/Senku_test.png')", spriteRight: "url('../assets/Gen_test.png')"},
 
   ],
 ]
@@ -74,12 +74,13 @@ const numberPadElement = document.querySelectorAll(".numberPadScene")
 const paperHalf_1Element = document.querySelector("#paperHalf_1Full")
 const paperHalf_2Element = document.querySelector("#paperHalf_2Full")
 const losingScreenElement = document.querySelector("#losingScreen")
+const winningScreenElement = document.querySelector("#winningScreen")
 
 // puzzles
 const numberPuzzleElement = document.querySelectorAll(".number")
 
 /*-------------------------------- variables --------------------------------*/
-let currentScene, inventory, firstClickedItem, secondClickedItem, count = 600
+let currentScene, inventory, firstClickedItem, secondClickedItem, count, comboIsSet
 
 
 /*-------------------------------- Constants --------------------------------*/
@@ -145,6 +146,14 @@ const mergeableItems = [
   ["fingerprintsKit", "coffee"],
   ["fingerprintsKit", "xenoPhone"],
   ["fingerprintsKit", "briefCase"],
+]
+
+const inventoryItems = [
+  {item:"paperHalf_1", img:"url('../assets/Senku_test.png')", background: paperHalf_1Element},
+  {item:"paperHalf_2", img:"url('../assets/Senku_test.png')", background: paperHalf_2Element},
+  {item:"fullPaper", img:"url('../assets/Gen_test.png')", background: "url('../assets/Gen_test.png')"},
+  {item:"fingerprintsKit", img:"url('../assets/Senku_test.png')"},
+  {item:"fingerprint", img:"url('../assets/Gen_test.png')", background: "url('../assets/Senku_test.png')"}
 ]
 
 const briefCaseNumbers = [0, 0, 0, 0, 0, 0]
@@ -217,8 +226,16 @@ const losingScreen = (()=>{
 })
 
 const winningScreen = (()=>{
-  console.log("WIN");
-})
+  winningScreenElement.classList.remove("hide")
+  hide(dialogueConstructionElement)
+  hide(itemElement)
+  hide(puzzleElement)
+  hide(inventoryElement)
+  hide(SceneElements)
+  hide(mainRoomElement)
+  hide(showBiggerBackgroundElement)
+  backButtonElement.classList.add("hide")
+  timeTrackerElement.classList.add("hide")})
 
 // reference: https://www.shecodes.io/athena/52336-how-to-create-a-countdown-timer-in-javascript#:~:text=let%20count%20%3D%2060%3B%20const%20timer,")%3B%20%7D%20%7D%2C%201000)%3B
 const timer = (()=>{
@@ -259,9 +276,11 @@ const init = () =>{
   // inventory is empty
   inventory = []
   // clicked item 1
-  firstClickedItem = ""
+  firstClickedItem = {name: "", idx:""}
   // clicked item 2
-  secondClickedItem = ""
+  secondClickedItem = {name: "", idx:""}
+  comboIsSet = false
+  count = 600
   // no dialogue
   hide(dialogueConstructionElement)
   // no scenes
@@ -269,6 +288,7 @@ const init = () =>{
   // no back button
   backButtonElement.classList.add("hide")
   losingScreenElement.classList.add("hide")
+  winningScreenElement.classList.add("hide")
   // starts the timer
   timer()
 
@@ -278,59 +298,91 @@ const init = () =>{
 
 init()
 
+const showInventory = () =>{
+  console.log(inventory, inventory.length);
+  for(i=0; i<inventory.length; i++){
+    inventoryElement[i+1].style.backgroundImage=inventory[i].img
+  }
+  for(i=inventory.length; i<8; i++){
+    inventoryElement[i+1].style.backgroundImage=""
+  }
+}
+
 const addToInventory = (item) =>{
-  // it will push it into the inventory 
-  inventory.push(item)
-  // It will find it's index
-  let inventoryId = inventory.findIndex((invItem)=>{
-    return invItem===item
+  let inventoryItemsID = inventoryItems.findIndex((invItem)=>{
+    return invItem.item===item
   })
-  // and then it will display it into the inventory block with the same index
-  inventoryElement[inventoryId+1].style.backgroundImage="url('../assets/Senku_test.png')"
+
+  inventory.push(inventoryItems[inventoryItemsID])
+
   itemElement.forEach(element => {
     if(element.id===item){
       element.remove()
     }
   });
+
+  showInventory()
 }
 
-const mergeItems = (firstItem, secondItem) =>{
-  if(firstItem==="paperHalf_1" && secondItem==="paperHalf_2" || secondItem==="paperHalf_1" && firstItem==="paperHalf_2"){
-    console.log("it's a full paper!!");
+// const mergeItems = (firstItem, secondItem) =>{
+//   if(firstItem==="paperHalf_1" && secondItem==="paperHalf_2" || secondItem==="paperHalf_1" && firstItem==="paperHalf_2"){
+//     console.log("it's a full paper!!");
 
-    let item1 = inventory.findIndex((item)=>{
-      return item===firstItem
-    })
+//     let item1 = inventory.findIndex((item)=>{
+//       return item===firstItem
+//     })
   
-    let item2 = inventory.findIndex((item)=>{
-      return item===secondItem
-    })
+//     let item2 = inventory.findIndex((item)=>{
+//       return item===secondItem
+//     })
   
-    inventory[item1]="fullPaper"
-    inventory.splice(item2, 1)
-    inventoryElement[item1+1].style.backgroundImage=""
-    inventoryElement[item2+1].style.backgroundImage="url('../assets/Gen_test.png')"
-    console.log(inventoryElement[item1+1], inventoryElement[item2+1]);
+//     inventory[item1]="fullPaper"
+//     inventory.splice(item2, 1)
+//     inventoryElement[item1+1].style.backgroundImage=""
+//     inventoryElement[item2+1].style.backgroundImage="url('../assets/Gen_test.png')"
+//     console.log(inventoryElement[item1+1], inventoryElement[item2+1]);
+//   }
+
+//   else if(firstItem==="fingerprintsKit" && secondItem==="keyboard"){
+//     inventory.push(key.item)
+
+//     let inventoryId = inventory.findIndex((object)=>{
+//       return object===key.item
+//     })
+
+//     console.log(inventoryId);
+
+//     inventoryElement[inventoryId+1].style.backgroundImage=key.img
+//   }
+//   else if(firstItem==="fingerprint" && secondItem==="fingerprintReader"){
+//     winningScreen()
+//   }
+//   firstClickedItem = ""
+//   secondClickedItem = ""
+
+//   console.log(inventory);
+// }
+
+const mergeItems = (firstItem, secondItem)=>{
+  console.log("you're in");
+  if(firstItem.name==="paperHalf_1" && secondItem.name==="paperHalf_2" || firstItem.name==="paperHalf_2" && secondItem.name==="paperHalf_1"){
+    inventory.splice(firstItem.idx, 1)
+    inventory.splice(secondItem.idx, 1)
+    inventory.push(inventoryItems[2])
+    console.log(inventory);
   }
 
-  else if(firstItem==="fingerprintsKit" && secondItem==="keyboard"){
-    inventory.push(key.item)
-
-    let inventoryId = inventory.findIndex((object)=>{
-      return object===key.item
-    })
-
-    console.log(inventoryId);
-
-    inventoryElement[inventoryId+1].style.backgroundImage=key.img
+  if(firstItem.name==="fingerprintsKit" && secondItem.name==="keyboard"){
+    inventory.push(inventoryItems[4])
+    console.log(inventory);
   }
-  else if(firstItem==="fingerprint" && secondItem==="fingerprintReader"){
+
+  if(firstItem.name==="fingerprint" && secondItem.name==="fingerprintReader"){
     winningScreen()
   }
-  firstClickedItem = ""
-  secondClickedItem = ""
 
-  console.log(inventory);
+  resetClickedItems()
+  showInventory()
 }
 
 const displayDialogue = (scenes, idx) =>{
@@ -360,24 +412,67 @@ const displayDialogue = (scenes, idx) =>{
   })
 }
 
-const itemsWereClicked = (itemToSave) =>{
-  let itemToShow = clickableItems.findIndex((item)=>{
-    return item.item===itemToSave
+const resetClickedItems = () =>{
+  firstClickedItem= {name: "", idx:""}
+}
+
+const itemsWereClicked = (itemToSave, idx) =>{
+  if(itemToSave.item==="fingerprintsKit"){
+    if(firstClickedItem.name===""){
+      firstClickedItem.name=itemToSave.item
+      console.log("first");
+      return
+    }
+  }
+
+  if(itemToSave==="keyboard"){
+    if(firstClickedItem.name!=""){
+      console.log("second");
+      secondClickedItem.name="keyboard"
+    }
+    mergeItems(firstClickedItem, secondClickedItem)
+    return
+  }
+
+  if(itemToSave==="fingerprintReader"){
+    if(firstClickedItem.name!=""){
+      console.log("second");
+      secondClickedItem.name="fingerprintReader"
+    }
+    mergeItems(firstClickedItem, secondClickedItem)
+    return
+  }
+
+  if(itemToSave.item==="fingerprint"){
+    if(firstClickedItem.name===""){
+      firstClickedItem.name=itemToSave.item
+      console.log("first");
+      return
+    }
+  }
+  
+  let searchItem = itemToSave.item
+  
+  let itemToShow = inventoryItems.findIndex((invElem)=>{
+    return invElem.item === searchItem
   })
 
-  if(itemToShow=!3){
-    background = clickableItems[itemToShow].background
+    background = inventoryItems[itemToShow].background
     background.classList.remove("hide")
     hide(mainRoomElement)
     backButtonElement.classList.remove("hide")
+
+  if(firstClickedItem.name===""){
+    firstClickedItem.name=itemToSave.item
+    firstClickedItem.idx=idx
+    console.log("first");
+    return
   }
 
-  if(firstClickedItem===""){
-    firstClickedItem=itemToSave
-  }
-
-  else if(firstClickedItem!="" || firstClickedItem!=itemToSave){
-    secondClickedItem=itemToSave
+  if(firstClickedItem.name!=""){
+    secondClickedItem.name=itemToSave.item
+    secondClickedItem.idx=idx
+    console.log("sec");
     mergeItems(firstClickedItem, secondClickedItem)
   }
 }
@@ -429,12 +524,14 @@ const directDisplayItem = (clickedItem) =>{
 /*----------------------------- Event Listeners -----------------------------*/
 mainRoomElement.forEach((element)=>{
   element.addEventListener('click',(event)=>{
+    resetClickedItems()
     directDisplayRoom(event)
   })
 })
 
 showBiggerBackgroundElement.forEach((element)=>{
   element.addEventListener('click',(event)=>{
+    resetClickedItems()
     directDisplayRoom(event)
     element.classList.add("hide")
   })
@@ -452,12 +549,14 @@ itemElement.forEach((item)=>{
       return
     }
     else{
+      resetClickedItems()
       directDisplayItem(event)
     }
   })
 })
 
 backButtonElement.addEventListener("click", ()=>{
+  resetClickedItems()
   // it will hide dialogue, scenes and itself, and show elements and the inventory. 
   hide(dialogueConstructionElement)
   hide(SceneElements)
@@ -471,13 +570,14 @@ inventoryElement.forEach((invBlock, idx) => {
   if(invBlock.id==="inventoryBox"){}
   else{
     invBlock.addEventListener("click", ()=>{
-      itemsWereClicked(inventory[idx-1])
+      itemsWereClicked(inventory[idx-1], idx-1)
     })
   }
 });
 
 numberPuzzleElement.forEach((element, idx)=>{
   element.addEventListener('click', ()=>{
+    resetClickedItems()
     briefCaseFunction(idx)
   })
 })
